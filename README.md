@@ -16,3 +16,5 @@ chmod +x mod_host.sh
 可以起一个定时任务，动态的修改容器hosts。
 
 new_hosts的正则匹配模式可根据需要自行修改arrs=($(awk '/([0-9]{1,3}\.){3}[0-9]{1,3}.*#.*\[/ {print $1,$2}' $1))此行代码
+
+备注: alpine使用的sh为busybox,不支持数组，需要使用bash自行安装apk add --no-cache bash bash-doc bash-completion 
