@@ -11,7 +11,7 @@ chmod +x mod_host.sh
 ```
 
 应用场景举例：
-在容器中，new_hosts可以把宿主机的/etc/hosts mount进来，即指定宿主机的hosts，即可修改容器内的hosts。
+在容器中，new_hosts可以把宿主机的/etc/hosts mount进来，即指定宿主机的hosts，相当于复制一份宿主机的hosts列表，方便一些爬虫任务获取低延时的域名ip解析。
 
 可以起一个定时任务，动态的修改容器hosts。
 
